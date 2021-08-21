@@ -99,13 +99,10 @@
 		F3C45D2D26D1357E00BE8D67 /* ChatComponent */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D2E26D1357E00BE8D67 /* AppDelegate.swift */,
-				F3C45D3026D1357E00BE8D67 /* SceneDelegate.swift */,
-				F3C45D3226D1357E00BE8D67 /* ViewController.swift */,
-				F3C45D3426D1357E00BE8D67 /* Main.storyboard */,
-				F3C45D3726D1358400BE8D67 /* Assets.xcassets */,
-				F3C45D3926D1358400BE8D67 /* LaunchScreen.storyboard */,
-				F3C45D3C26D1358400BE8D67 /* Info.plist */,
+				F3C45D6126D135E800BE8D67 /* Modules */,
+				F3C45D6026D135DE00BE8D67 /* Main */,
+				F3C45D5F26D135CE00BE8D67 /* Sources */,
+				F3C45D5E26D135B500BE8D67 /* App */,
 			);
 			path = ChatComponent;
 			sourceTree = "<group>";
@@ -126,6 +123,57 @@
 				F3C45D5226D1358400BE8D67 /* Info.plist */,
 			);
 			path = ChatComponentUITests;
+			sourceTree = "<group>";
+		};
+		F3C45D5E26D135B500BE8D67 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D3C26D1358400BE8D67 /* Info.plist */,
+				F3C45D2E26D1357E00BE8D67 /* AppDelegate.swift */,
+				F3C45D3026D1357E00BE8D67 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F3C45D5F26D135CE00BE8D67 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D3726D1358400BE8D67 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F3C45D6026D135DE00BE8D67 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D3226D1357E00BE8D67 /* ViewController.swift */,
+				F3C45D3426D1357E00BE8D67 /* Main.storyboard */,
+				F3C45D3926D1358400BE8D67 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F3C45D6126D135E800BE8D67 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D6326D135F400BE8D67 /* ChatList */,
+				F3C45D6226D135EF00BE8D67 /* Chat */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F3C45D6226D135EF00BE8D67 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		F3C45D6326D135F400BE8D67 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WT55D455BY;
 				INFOPLIST_FILE = ChatComponent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WT55D455BY;
 				INFOPLIST_FILE = ChatComponent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,27 @@
 		F3C45D3B26D1358400BE8D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C45D3926D1358400BE8D67 /* LaunchScreen.storyboard */; };
 		F3C45D4626D1358400BE8D67 /* ChatComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D4526D1358400BE8D67 /* ChatComponentTests.swift */; };
 		F3C45D5126D1358400BE8D67 /* ChatComponentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D5026D1358400BE8D67 /* ChatComponentUITests.swift */; };
+		F3C45D6626D1383800BE8D67 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D6526D1383800BE8D67 /* RxSwift */; };
+		F3C45D6826D1383800BE8D67 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D6726D1383800BE8D67 /* RxTest */; };
+		F3C45D6A26D1383800BE8D67 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D6926D1383800BE8D67 /* RxRelay */; };
+		F3C45D6C26D1383800BE8D67 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D6B26D1383800BE8D67 /* RxCocoa */; };
+		F3C45D6E26D1383800BE8D67 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D6D26D1383800BE8D67 /* RxBlocking */; };
+		F3C45D7626D13A4000BE8D67 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7526D13A4000BE8D67 /* MessagesViewController.swift */; };
+		F3C45D7926D13B7500BE8D67 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7826D13B7500BE8D67 /* UIView+Extensions.swift */; };
+		F3C45D7C26D13C1C00BE8D67 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D7B26D13C1C00BE8D67 /* SnapKit */; };
+		F3C45D7E26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7D26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift */; };
+		F3C45D8226D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8126D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift */; };
+		F3C45D8726D1470900BE8D67 /* IncomingTextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8626D1470900BE8D67 /* IncomingTextMessageView.swift */; };
+		F3C45D8926D1472C00BE8D67 /* OutgoingTextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8826D1472C00BE8D67 /* OutgoingTextMessageView.swift */; };
+		F3C45D8C26D1487B00BE8D67 /* BaseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8B26D1487B00BE8D67 /* BaseMessageView.swift */; };
+		F3C45D9126D14A9100BE8D67 /* BaseTextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9026D14A9100BE8D67 /* BaseTextMessageView.swift */; };
+		F3C45D9426D1717F00BE8D67 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9326D1717F00BE8D67 /* Reusable.swift */; };
+		F3C45D9626D189A400BE8D67 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9526D189A400BE8D67 /* Array+Extensions.swift */; };
+		F3C45D9A26D1A50500BE8D67 /* MessagesSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9926D1A50500BE8D67 /* MessagesSectionProtocol.swift */; };
+		F3C45D9C26D1A53400BE8D67 /* MessagesItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9B26D1A53400BE8D67 /* MessagesItemProtocol.swift */; };
+		F3C45D9E26D1A81300BE8D67 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9D26D1A81300BE8D67 /* MessagesViewModel.swift */; };
+		F3C45DA126D1A8FD00BE8D67 /* MessagesViewModelBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DA026D1A8FD00BE8D67 /* MessagesViewModelBindings.swift */; };
+		F3C45DA326D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DA226D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +70,21 @@
 		F3C45D4C26D1358400BE8D67 /* ChatComponentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatComponentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C45D5026D1358400BE8D67 /* ChatComponentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatComponentUITests.swift; sourceTree = "<group>"; };
 		F3C45D5226D1358400BE8D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C45D7526D13A4000BE8D67 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		F3C45D7826D13B7500BE8D67 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F3C45D7D26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3C45D8126D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3C45D8626D1470900BE8D67 /* IncomingTextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageView.swift; sourceTree = "<group>"; };
+		F3C45D8826D1472C00BE8D67 /* OutgoingTextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageView.swift; sourceTree = "<group>"; };
+		F3C45D8B26D1487B00BE8D67 /* BaseMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessageView.swift; sourceTree = "<group>"; };
+		F3C45D9026D14A9100BE8D67 /* BaseTextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextMessageView.swift; sourceTree = "<group>"; };
+		F3C45D9326D1717F00BE8D67 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		F3C45D9526D189A400BE8D67 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		F3C45D9926D1A50500BE8D67 /* MessagesSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesSectionProtocol.swift; sourceTree = "<group>"; };
+		F3C45D9B26D1A53400BE8D67 /* MessagesItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesItemProtocol.swift; sourceTree = "<group>"; };
+		F3C45D9D26D1A81300BE8D67 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
+		F3C45DA026D1A8FD00BE8D67 /* MessagesViewModelBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModelBindings.swift; sourceTree = "<group>"; };
+		F3C45DA226D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+DiffableDataSources.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C45D6C26D1383800BE8D67 /* RxCocoa in Frameworks */,
+				F3C45D7C26D13C1C00BE8D67 /* SnapKit in Frameworks */,
+				F3C45D6A26D1383800BE8D67 /* RxRelay in Frameworks */,
+				F3C45D6626D1383800BE8D67 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C45D6826D1383800BE8D67 /* RxTest in Frameworks */,
+				F3C45D6E26D1383800BE8D67 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +141,13 @@
 		F3C45D2D26D1357E00BE8D67 /* ChatComponent */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D6126D135E800BE8D67 /* Modules */,
-				F3C45D6026D135DE00BE8D67 /* Main */,
-				F3C45D5F26D135CE00BE8D67 /* Sources */,
+				F3C45D3C26D1358400BE8D67 /* Info.plist */,
 				F3C45D5E26D135B500BE8D67 /* App */,
+				F3C45D7726D13B5800BE8D67 /* Extensions */,
+				F3C45D6026D135DE00BE8D67 /* Main */,
+				F3C45D6126D135E800BE8D67 /* Modules */,
+				F3C45D9226D1716D00BE8D67 /* Protocols */,
+				F3C45D5F26D135CE00BE8D67 /* Sources */,
 			);
 			path = ChatComponent;
 			sourceTree = "<group>";
@@ -128,7 +173,6 @@
 		F3C45D5E26D135B500BE8D67 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D3C26D1358400BE8D67 /* Info.plist */,
 				F3C45D2E26D1357E00BE8D67 /* AppDelegate.swift */,
 				F3C45D3026D1357E00BE8D67 /* SceneDelegate.swift */,
 			);
@@ -156,8 +200,8 @@
 		F3C45D6126D135E800BE8D67 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D6326D135F400BE8D67 /* ChatList */,
 				F3C45D6226D135EF00BE8D67 /* Chat */,
+				F3C45D6326D135F400BE8D67 /* ChatList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -165,6 +209,11 @@
 		F3C45D6226D135EF00BE8D67 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				F3C45D7426D139D400BE8D67 /* Cells */,
+				F3C45D7326D139CB00BE8D67 /* Models */,
+				F3C45D7226D139A500BE8D67 /* ViewModel */,
+				F3C45D7126D1399F00BE8D67 /* Controller */,
+				F3C45D6F26D1394500BE8D67 /* Views */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -174,6 +223,158 @@
 			children = (
 			);
 			path = ChatList;
+			sourceTree = "<group>";
+		};
+		F3C45D6F26D1394500BE8D67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8F26D14A4D00BE8D67 /* BaseTextMessage */,
+				F3C45D8A26D1486100BE8D67 /* BaseMessage */,
+				F3C45D8526D143A500BE8D67 /* IncomingMessages */,
+				F3C45D8326D1430B00BE8D67 /* OutgoingMessages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3C45D7126D1399F00BE8D67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D7526D13A4000BE8D67 /* MessagesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3C45D7226D139A500BE8D67 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D9D26D1A81300BE8D67 /* MessagesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3C45D7326D139CB00BE8D67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D9F26D1A8F300BE8D67 /* Bindings */,
+				F3C45D9826D1A4C600BE8D67 /* Item */,
+				F3C45D9726D1A4C200BE8D67 /* Section */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3C45D7426D139D400BE8D67 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D7F26D1405800BE8D67 /* IncomingMessage */,
+				F3C45D8026D1407C00BE8D67 /* OutgoingMessage */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F3C45D7726D13B5800BE8D67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D7826D13B7500BE8D67 /* UIView+Extensions.swift */,
+				F3C45D9526D189A400BE8D67 /* Array+Extensions.swift */,
+				F3C45DA226D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3C45D7F26D1405800BE8D67 /* IncomingMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D7D26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift */,
+			);
+			path = IncomingMessage;
+			sourceTree = "<group>";
+		};
+		F3C45D8026D1407C00BE8D67 /* OutgoingMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8126D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift */,
+			);
+			path = OutgoingMessage;
+			sourceTree = "<group>";
+		};
+		F3C45D8326D1430B00BE8D67 /* OutgoingMessages */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8E26D14A3800BE8D67 /* Text */,
+			);
+			path = OutgoingMessages;
+			sourceTree = "<group>";
+		};
+		F3C45D8526D143A500BE8D67 /* IncomingMessages */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8D26D14A3200BE8D67 /* Text */,
+			);
+			path = IncomingMessages;
+			sourceTree = "<group>";
+		};
+		F3C45D8A26D1486100BE8D67 /* BaseMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8B26D1487B00BE8D67 /* BaseMessageView.swift */,
+			);
+			path = BaseMessage;
+			sourceTree = "<group>";
+		};
+		F3C45D8D26D14A3200BE8D67 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8626D1470900BE8D67 /* IncomingTextMessageView.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F3C45D8E26D14A3800BE8D67 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8826D1472C00BE8D67 /* OutgoingTextMessageView.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F3C45D8F26D14A4D00BE8D67 /* BaseTextMessage */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D9026D14A9100BE8D67 /* BaseTextMessageView.swift */,
+			);
+			path = BaseTextMessage;
+			sourceTree = "<group>";
+		};
+		F3C45D9226D1716D00BE8D67 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D9326D1717F00BE8D67 /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F3C45D9726D1A4C200BE8D67 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D9926D1A50500BE8D67 /* MessagesSectionProtocol.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		F3C45D9826D1A4C600BE8D67 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D9B26D1A53400BE8D67 /* MessagesItemProtocol.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		F3C45D9F26D1A8F300BE8D67 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DA026D1A8FD00BE8D67 /* MessagesViewModelBindings.swift */,
+			);
+			path = Bindings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +393,12 @@
 			dependencies = (
 			);
 			name = ChatComponent;
+			packageProductDependencies = (
+				F3C45D6526D1383800BE8D67 /* RxSwift */,
+				F3C45D6926D1383800BE8D67 /* RxRelay */,
+				F3C45D6B26D1383800BE8D67 /* RxCocoa */,
+				F3C45D7B26D13C1C00BE8D67 /* SnapKit */,
+			);
 			productName = ChatComponent;
 			productReference = F3C45D2B26D1357E00BE8D67 /* ChatComponent.app */;
 			productType = "com.apple.product-type.application";
@@ -210,6 +417,10 @@
 				F3C45D4326D1358400BE8D67 /* PBXTargetDependency */,
 			);
 			name = ChatComponentTests;
+			packageProductDependencies = (
+				F3C45D6726D1383800BE8D67 /* RxTest */,
+				F3C45D6D26D1383800BE8D67 /* RxBlocking */,
+			);
 			productName = ChatComponentTests;
 			productReference = F3C45D4126D1358400BE8D67 /* ChatComponentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -263,6 +474,10 @@
 				Base,
 			);
 			mainGroup = F3C45D2226D1357E00BE8D67;
+			packageReferences = (
+				F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F3C45D7A26D13C1C00BE8D67 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F3C45D2C26D1357E00BE8D67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,9 +521,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C45D9426D1717F00BE8D67 /* Reusable.swift in Sources */,
+				F3C45D7E26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift in Sources */,
+				F3C45D8726D1470900BE8D67 /* IncomingTextMessageView.swift in Sources */,
+				F3C45D8926D1472C00BE8D67 /* OutgoingTextMessageView.swift in Sources */,
+				F3C45D9C26D1A53400BE8D67 /* MessagesItemProtocol.swift in Sources */,
 				F3C45D3326D1357E00BE8D67 /* ViewController.swift in Sources */,
+				F3C45D9E26D1A81300BE8D67 /* MessagesViewModel.swift in Sources */,
 				F3C45D2F26D1357E00BE8D67 /* AppDelegate.swift in Sources */,
+				F3C45D8226D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift in Sources */,
+				F3C45D7926D13B7500BE8D67 /* UIView+Extensions.swift in Sources */,
+				F3C45D7626D13A4000BE8D67 /* MessagesViewController.swift in Sources */,
+				F3C45DA326D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift in Sources */,
+				F3C45D9626D189A400BE8D67 /* Array+Extensions.swift in Sources */,
 				F3C45D3126D1357E00BE8D67 /* SceneDelegate.swift in Sources */,
+				F3C45DA126D1A8FD00BE8D67 /* MessagesViewModelBindings.swift in Sources */,
+				F3C45D9A26D1A50500BE8D67 /* MessagesSectionProtocol.swift in Sources */,
+				F3C45D8C26D1487B00BE8D67 /* BaseMessageView.swift in Sources */,
+				F3C45D9126D14A9100BE8D67 /* BaseTextMessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +873,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		F3C45D7A26D13C1C00BE8D67 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3C45D6526D1383800BE8D67 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F3C45D6726D1383800BE8D67 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		F3C45D6926D1383800BE8D67 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F3C45D6B26D1383800BE8D67 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F3C45D6D26D1383800BE8D67 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C45D6426D1383800BE8D67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		F3C45D7B26D13C1C00BE8D67 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C45D7A26D13C1C00BE8D67 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3C45D2326D1357E00BE8D67 /* Project object */;
 }

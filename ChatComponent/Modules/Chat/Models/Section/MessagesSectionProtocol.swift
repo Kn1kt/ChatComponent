@@ -7,8 +7,19 @@
 
 import Foundation
 
-public protocol MessagesSectionProtocol: DiffableSection where DiffableItem: MessagesItemProtocol {
-            
-    var height: Int { get }
+public protocol MessagesSectionProtocol: DiffableSection, HeightProvider where DiffableItem: MessagesItemProtocol {
+                
+}
+
+// MARK: - MessagesSection
+
+public struct MessagesSection: MessagesSectionProtocol {
+        
+    public let items: [MessagesItem]
     
+    public var height: Int { items.map(\.height).reduce(0, +) }
+    
+    public init(items: [MessagesItem]) {
+        self.items = items
+    }
 }

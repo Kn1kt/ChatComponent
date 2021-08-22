@@ -36,6 +36,17 @@
 		F3C45D9E26D1A81300BE8D67 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D9D26D1A81300BE8D67 /* MessagesViewModel.swift */; };
 		F3C45DA126D1A8FD00BE8D67 /* MessagesViewModelBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DA026D1A8FD00BE8D67 /* MessagesViewModelBindings.swift */; };
 		F3C45DA326D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DA226D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift */; };
+		F3C45DA526D2D11800BE8D67 /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DA426D2D11800BE8D67 /* CellViewModelProtocol.swift */; };
+		F3C45DA726D2D1AF00BE8D67 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DA626D2D1AF00BE8D67 /* ReusableCell.swift */; };
+		F3C45DAB26D2D2E100BE8D67 /* MessagesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DAA26D2D2E100BE8D67 /* MessagesServiceProtocol.swift */; };
+		F3C45DB126D2D7CF00BE8D67 /* TextMessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DB026D2D7CF00BE8D67 /* TextMessageProtocol.swift */; };
+		F3C45DB426D2D80100BE8D67 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DB326D2D80100BE8D67 /* UserProtocol.swift */; };
+		F3C45DB726D2DCD400BE8D67 /* ChatProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DB626D2DCD400BE8D67 /* ChatProtocol.swift */; };
+		F3C45DBB26D2DEEA00BE8D67 /* CollectionChangeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DBA26D2DEEA00BE8D67 /* CollectionChangeset.swift */; };
+		F3C45DBD26D2F8FD00BE8D67 /* HeightProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DBC26D2F8FD00BE8D67 /* HeightProvider.swift */; };
+		F3C45DC026D2FEEC00BE8D67 /* MessageCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DBF26D2FEEC00BE8D67 /* MessageCellViewModelProtocol.swift */; };
+		F3C45DC326D3047E00BE8D67 /* MessageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DC226D3047E00BE8D67 /* MessageState.swift */; };
+		F3C45DC626D3059E00BE8D67 /* MessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45DC526D3059E00BE8D67 /* MessageProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +96,17 @@
 		F3C45D9D26D1A81300BE8D67 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		F3C45DA026D1A8FD00BE8D67 /* MessagesViewModelBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModelBindings.swift; sourceTree = "<group>"; };
 		F3C45DA226D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+DiffableDataSources.swift"; sourceTree = "<group>"; };
+		F3C45DA426D2D11800BE8D67 /* CellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProtocol.swift; sourceTree = "<group>"; };
+		F3C45DA626D2D1AF00BE8D67 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		F3C45DAA26D2D2E100BE8D67 /* MessagesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesServiceProtocol.swift; sourceTree = "<group>"; };
+		F3C45DB026D2D7CF00BE8D67 /* TextMessageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageProtocol.swift; sourceTree = "<group>"; };
+		F3C45DB326D2D80100BE8D67 /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		F3C45DB626D2DCD400BE8D67 /* ChatProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProtocol.swift; sourceTree = "<group>"; };
+		F3C45DBA26D2DEEA00BE8D67 /* CollectionChangeset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionChangeset.swift; sourceTree = "<group>"; };
+		F3C45DBC26D2F8FD00BE8D67 /* HeightProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightProvider.swift; sourceTree = "<group>"; };
+		F3C45DBF26D2FEEC00BE8D67 /* MessageCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		F3C45DC226D3047E00BE8D67 /* MessageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageState.swift; sourceTree = "<group>"; };
+		F3C45DC526D3059E00BE8D67 /* MessageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,12 +163,14 @@
 		F3C45D2D26D1357E00BE8D67 /* ChatComponent */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D3C26D1358400BE8D67 /* Info.plist */,
 				F3C45D5E26D135B500BE8D67 /* App */,
 				F3C45D7726D13B5800BE8D67 /* Extensions */,
+				F3C45D3C26D1358400BE8D67 /* Info.plist */,
 				F3C45D6026D135DE00BE8D67 /* Main */,
+				F3C45DAD26D2D7AB00BE8D67 /* Models */,
 				F3C45D6126D135E800BE8D67 /* Modules */,
 				F3C45D9226D1716D00BE8D67 /* Protocols */,
+				F3C45DA826D2D2A800BE8D67 /* Services */,
 				F3C45D5F26D135CE00BE8D67 /* Sources */,
 			);
 			path = ChatComponent;
@@ -255,6 +279,7 @@
 		F3C45D7326D139CB00BE8D67 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F3C45DB826D2DE4F00BE8D67 /* CollectionUpdate */,
 				F3C45D9F26D1A8F300BE8D67 /* Bindings */,
 				F3C45D9826D1A4C600BE8D67 /* Item */,
 				F3C45D9726D1A4C200BE8D67 /* Section */,
@@ -265,6 +290,7 @@
 		F3C45D7426D139D400BE8D67 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F3C45DBE26D2FE9C00BE8D67 /* CellModel */,
 				F3C45D7F26D1405800BE8D67 /* IncomingMessage */,
 				F3C45D8026D1407C00BE8D67 /* OutgoingMessage */,
 			);
@@ -349,6 +375,9 @@
 			isa = PBXGroup;
 			children = (
 				F3C45D9326D1717F00BE8D67 /* Reusable.swift */,
+				F3C45DA426D2D11800BE8D67 /* CellViewModelProtocol.swift */,
+				F3C45DA626D2D1AF00BE8D67 /* ReusableCell.swift */,
+				F3C45DBC26D2F8FD00BE8D67 /* HeightProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -375,6 +404,106 @@
 				F3C45DA026D1A8FD00BE8D67 /* MessagesViewModelBindings.swift */,
 			);
 			path = Bindings;
+			sourceTree = "<group>";
+		};
+		F3C45DA826D2D2A800BE8D67 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DAC26D2D2EE00BE8D67 /* Messages */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F3C45DAC26D2D2EE00BE8D67 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DAA26D2D2E100BE8D67 /* MessagesServiceProtocol.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		F3C45DAD26D2D7AB00BE8D67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DC126D3045A00BE8D67 /* MessageState */,
+				F3C45DB926D2DEC900BE8D67 /* Changeset */,
+				F3C45DB526D2DCAB00BE8D67 /* Chat */,
+				F3C45DB226D2D7DC00BE8D67 /* Users */,
+				F3C45DAE26D2D7BC00BE8D67 /* Messages */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3C45DAE26D2D7BC00BE8D67 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DC426D3059200BE8D67 /* Base */,
+				F3C45DAF26D2D7C700BE8D67 /* Text */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		F3C45DAF26D2D7C700BE8D67 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DB026D2D7CF00BE8D67 /* TextMessageProtocol.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F3C45DB226D2D7DC00BE8D67 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DB326D2D80100BE8D67 /* UserProtocol.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		F3C45DB526D2DCAB00BE8D67 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DB626D2DCD400BE8D67 /* ChatProtocol.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		F3C45DB826D2DE4F00BE8D67 /* CollectionUpdate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionUpdate;
+			sourceTree = "<group>";
+		};
+		F3C45DB926D2DEC900BE8D67 /* Changeset */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DBA26D2DEEA00BE8D67 /* CollectionChangeset.swift */,
+			);
+			path = Changeset;
+			sourceTree = "<group>";
+		};
+		F3C45DBE26D2FE9C00BE8D67 /* CellModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DBF26D2FEEC00BE8D67 /* MessageCellViewModelProtocol.swift */,
+			);
+			path = CellModel;
+			sourceTree = "<group>";
+		};
+		F3C45DC126D3045A00BE8D67 /* MessageState */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DC226D3047E00BE8D67 /* MessageState.swift */,
+			);
+			path = MessageState;
+			sourceTree = "<group>";
+		};
+		F3C45DC426D3059200BE8D67 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45DC526D3059E00BE8D67 /* MessageProtocol.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,24 +650,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C45DA726D2D1AF00BE8D67 /* ReusableCell.swift in Sources */,
+				F3C45DBB26D2DEEA00BE8D67 /* CollectionChangeset.swift in Sources */,
 				F3C45D9426D1717F00BE8D67 /* Reusable.swift in Sources */,
 				F3C45D7E26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift in Sources */,
+				F3C45DC026D2FEEC00BE8D67 /* MessageCellViewModelProtocol.swift in Sources */,
 				F3C45D8726D1470900BE8D67 /* IncomingTextMessageView.swift in Sources */,
 				F3C45D8926D1472C00BE8D67 /* OutgoingTextMessageView.swift in Sources */,
 				F3C45D9C26D1A53400BE8D67 /* MessagesItemProtocol.swift in Sources */,
+				F3C45DBD26D2F8FD00BE8D67 /* HeightProvider.swift in Sources */,
+				F3C45DC626D3059E00BE8D67 /* MessageProtocol.swift in Sources */,
 				F3C45D3326D1357E00BE8D67 /* ViewController.swift in Sources */,
 				F3C45D9E26D1A81300BE8D67 /* MessagesViewModel.swift in Sources */,
+				F3C45DC326D3047E00BE8D67 /* MessageState.swift in Sources */,
+				F3C45DB426D2D80100BE8D67 /* UserProtocol.swift in Sources */,
 				F3C45D2F26D1357E00BE8D67 /* AppDelegate.swift in Sources */,
 				F3C45D8226D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift in Sources */,
 				F3C45D7926D13B7500BE8D67 /* UIView+Extensions.swift in Sources */,
 				F3C45D7626D13A4000BE8D67 /* MessagesViewController.swift in Sources */,
+				F3C45DAB26D2D2E100BE8D67 /* MessagesServiceProtocol.swift in Sources */,
 				F3C45DA326D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift in Sources */,
 				F3C45D9626D189A400BE8D67 /* Array+Extensions.swift in Sources */,
 				F3C45D3126D1357E00BE8D67 /* SceneDelegate.swift in Sources */,
+				F3C45DB126D2D7CF00BE8D67 /* TextMessageProtocol.swift in Sources */,
 				F3C45DA126D1A8FD00BE8D67 /* MessagesViewModelBindings.swift in Sources */,
+				F3C45DA526D2D11800BE8D67 /* CellViewModelProtocol.swift in Sources */,
 				F3C45D9A26D1A50500BE8D67 /* MessagesSectionProtocol.swift in Sources */,
 				F3C45D8C26D1487B00BE8D67 /* BaseMessageView.swift in Sources */,
 				F3C45D9126D14A9100BE8D67 /* BaseTextMessageView.swift in Sources */,
+				F3C45DB726D2DCD400BE8D67 /* ChatProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

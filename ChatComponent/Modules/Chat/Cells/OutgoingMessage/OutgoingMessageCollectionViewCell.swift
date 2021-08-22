@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-open class OutgoingMessageCollectionViewCell: UICollectionViewCell, Reusable {
+open class OutgoingMessageCollectionViewCell: UICollectionViewCell, ReusableCell {
     
     public private(set) lazy var messageView = makeMessageView()
+    
+    public var cellModel: CellViewModelProtocol! {
+        didSet { setupBindings(on: cellModel) }
+    }
+    
+    private var disposeBag = DisposeBag()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,10 +28,12 @@ open class OutgoingMessageCollectionViewCell: UICollectionViewCell, Reusable {
         fatalError("init(coder:) has not been implemented")
     }
     
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+    
     open func setupSubviews() {
-        messageView.textLabel.text = "Out text"
-        messageView.timeLabel.text = "9:41"
-        
         contentView.addSubview(messageView)
         messageView.snp.makeConstraints { make in
             make.leading.greaterThanOrEqualToSuperview()
@@ -34,9 +44,43 @@ open class OutgoingMessageCollectionViewCell: UICollectionViewCell, Reusable {
         }
     }
     
+    final func setupBindings(on cellModel: CellViewModelProtocol) {
+        
+    }
+    
     private func makeMessageView() -> OutgoingTextMessageView {
         let view = OutgoingTextMessageView(frame: .zero)
         return view
+    }
+    
+}
+
+// MARK: - Binders
+
+extension OutgoingMessageCollectionViewCell {
+    
+    private var updateUI: Binder<TextMessageProtocol> {
+        return Binder(self) { cell, message in
+            cell.messageView.textLabel.text = message.text
+            cell.messageView.timeLabel.text = DateFormatter.localizedString(from: message.time,
+                                                                            dateStyle: .none,
+                                                                            timeStyle: .short)
+            
+            cell.messageView.stateImageView.tintColor = message.state == .unsent
+                ? .systemRed
+                : cell.messageView.textLabel.textColor.withAlphaComponent(0.8)
+            
+            switch message.state {
+            case .unsent:
+                cell.messageView.stateImageView.image = UIImage(systemName: "exclamationmark.circle.fill")
+            case .sending:
+                cell.messageView.stateImageView.image = UIImage(systemName: "clock.fill")
+            case .sent:
+                cell.messageView.stateImageView.image = UIImage(systemName: "checkmark.circle")
+            case .read:
+                cell.messageView.stateImageView.image = UIImage(systemName: "checkmark.circle.fill")
+            }
+        }
     }
     
 }

@@ -6,11 +6,18 @@
 //
 
 import UIKit
-import SnapKit
+import RxSwift
+import RxCocoa
 
-open class IncomingMessageCollectionViewCell: UICollectionViewCell, Reusable {
+open class IncomingMessageCollectionViewCell: UICollectionViewCell, ReusableCell {
     
     public private(set) lazy var messageView = makeMessageView()
+    
+    public var cellModel: CellViewModelProtocol! {
+        didSet { setupBindings(on: cellModel) }
+    }
+    
+    private var disposeBag = DisposeBag()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,10 +28,12 @@ open class IncomingMessageCollectionViewCell: UICollectionViewCell, Reusable {
         fatalError("init(coder:) has not been implemented")
     }
     
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+    
     open func setupSubviews() {
-        messageView.textLabel.text = "Out text"
-        messageView.timeLabel.text = "9:41"
-        
         contentView.addSubview(messageView)
         messageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(8)
@@ -35,8 +44,27 @@ open class IncomingMessageCollectionViewCell: UICollectionViewCell, Reusable {
         }
     }
     
+    final func setupBindings(on cellModel: CellViewModelProtocol) {
+        
+    }
+    
     private func makeMessageView() -> IncomingTextMessageView {
         let view = IncomingTextMessageView(frame: .zero)
         return view
     }
+}
+
+// MARK: - Binders
+
+extension IncomingMessageCollectionViewCell {
+    
+    private var updateUI: Binder<TextMessageProtocol> {
+        return Binder(self) { cell, message in
+            cell.messageView.textLabel.text = message.text
+            cell.messageView.timeLabel.text = DateFormatter.localizedString(from: message.time,
+                                                                            dateStyle: .none,
+                                                                            timeStyle: .short)
+        }
+    }
+    
 }

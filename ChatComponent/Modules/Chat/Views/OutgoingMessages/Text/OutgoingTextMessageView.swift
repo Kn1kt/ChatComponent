@@ -10,7 +10,7 @@ import SnapKit
 
 open class OutgoingTextMessageView: BaseTextMessageView {
     
-    public private(set) lazy var statusImageView = makeStatusImageView()
+    public private(set) lazy var stateImageView = makeStateImageView()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +26,7 @@ open class OutgoingTextMessageView: BaseTextMessageView {
         
         let timeAndStatusView = UIView(frame: .zero)
         timeAndStatusView.addSubview(timeLabel)
-        timeAndStatusView.addSubview(statusImageView)
+        timeAndStatusView.addSubview(stateImageView)
                 
         timeLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview()
@@ -34,7 +34,7 @@ open class OutgoingTextMessageView: BaseTextMessageView {
             make.bottom.equalToSuperview()
         }
         
-        statusImageView.snp.makeConstraints { make in
+        stateImageView.snp.makeConstraints { make in
             make.leading.equalTo(timeLabel.snp.trailing)
             make.trailing.equalToSuperview()
             make.top.equalToSuperview()
@@ -53,13 +53,13 @@ open class OutgoingTextMessageView: BaseTextMessageView {
         textLabel.textColor = .label
         textLabel.textAlignment = .right
         
-        timeLabel.textColor = .secondaryLabel
-        statusImageView.tintColor = timeLabel.textColor
+        timeLabel.textColor = .white
+        stateImageView.tintColor = timeLabel.textColor.withAlphaComponent(0.8)
         
         stackView.alignment = .lastBaseline
     }
     
-    open func makeStatusImageView() -> UIImageView {
+    open func makeStateImageView() -> UIImageView {
         let imageView = UIImageView(frame: .zero)
         imageView.preferredSymbolConfiguration = .init(font: timeLabel.font)
         imageView.image = UIImage(systemName: "checkmark")

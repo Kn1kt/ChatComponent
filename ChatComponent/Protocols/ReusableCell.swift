@@ -5,10 +5,8 @@
 //  Created by Nikita Konashenko on 22.08.2021.
 //
 
-import Foundation
+import UIKit
 
-public protocol ReusableCell: Reusable {
-    
-    var cellModel: CellViewModelProtocol! { get set }
-    
+public protocol ReusableCell: UICollectionViewCell, Reusable {
+    var cellModel: CellViewModelProtocol! { get set }    
 }

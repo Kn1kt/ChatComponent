@@ -14,10 +14,3 @@ public protocol UserProtocol {
     var imagePath: String { get }
     
 }
-
-public extension UserProtocol {
-    
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.id == rhs.id
-    }
-}

@@ -10,6 +10,6 @@ import RxRelay
 
 public protocol MessageCellViewModelProtocol: CellViewModelProtocol, HeightProvider {
     
-    var message: BehaviorRelay<Message> { get }
+    func accept(newMessage: Message)
     
 }

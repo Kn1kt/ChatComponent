@@ -10,21 +10,28 @@ import SnapKit
 
 open class OutgoingTextMessageView: BaseTextMessageView {
     
-    public private(set) lazy var stateImageView = makeStateImageView()
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupAppearance()
+    public struct Constants {
+        let textFont: UIFont
+        let timeFont: UIFont
+        let boundsInset: CGFloat
     }
     
-    public required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public private(set) lazy var stateImageView = makeStateImageView()
+    
+    private var constants: Constants?
+    
+    convenience init(constants: Constants) {
+        self.init(boundsInset: constants.boundsInset)
+        self.constants = constants
+        setupAppearance()
     }
     
     open override func setupSubviews() {
         super.setupSubviews()
         
-        let timeAndStatusView = UIView(frame: .zero)
+        stateImageView.setContentHuggingPriority(.required, for: .horizontal)
+        
+        let timeAndStatusView = UIView()
         timeAndStatusView.addSubview(timeLabel)
         timeAndStatusView.addSubview(stateImageView)
                 
@@ -50,20 +57,23 @@ open class OutgoingTextMessageView: BaseTextMessageView {
         layer.cornerRadius = 12
         layer.cornerCurve = .continuous
         
-        textLabel.textColor = .label
+        textLabel.textColor = .white
         textLabel.textAlignment = .right
+        textLabel.font = constants?.textFont
         
         timeLabel.textColor = .white
-        stateImageView.tintColor = timeLabel.textColor.withAlphaComponent(0.8)
+        timeLabel.font = constants?.timeFont
+        
+        stateImageView.tintColor = .white.withAlphaComponent(0.8)
         
         stackView.alignment = .lastBaseline
     }
     
     open func makeStateImageView() -> UIImageView {
-        let imageView = UIImageView(frame: .zero)
-        imageView.preferredSymbolConfiguration = .init(font: timeLabel.font)
+        let imageView = UIImageView()
+        imageView.preferredSymbolConfiguration = .init(font: constants?.timeFont ?? timeLabel.font)
         imageView.image = UIImage(systemName: "checkmark")
-        
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }
         

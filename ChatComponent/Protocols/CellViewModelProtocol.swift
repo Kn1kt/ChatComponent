@@ -9,7 +9,7 @@ import Foundation
 
 public protocol CellViewModelProtocol {
     
+    var cellIdentifier: String { get }
     var identifier: UUID { get }
-    static var cellIdentifier: String { get }
     
 }

@@ -12,46 +12,41 @@ open class BaseTextMessageView: BaseMessageView {
     public private(set) lazy var textLabel = makeTextLabel()
     public private(set) lazy var stackView = makeStackView()
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupSubviews()
-    }
+    private var boundsInset: CGFloat = .zero
     
-    public required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    convenience init(boundsInset: CGFloat) {
+        self.init()
+        self.boundsInset = boundsInset
+        setupSubviews()
     }
     
     // MARK: - Setup Subviews
     
     open func setupSubviews() {
-        let lowPriority = UILayoutPriority(rawValue: 230)
-        
-        textLabel.setContentHuggingPriority(lowPriority, for: .horizontal)
-        textLabel.setContentHuggingPriority(lowPriority, for: .vertical)
-        textLabel.setContentCompressionResistancePriority(lowPriority, for: .horizontal)
-        textLabel.setContentCompressionResistancePriority(lowPriority, for: .vertical)
+        textLabel.setContentHuggingPriority(.required - 2, for: .horizontal)
+        textLabel.setContentHuggingPriority(.required - 2, for: .vertical)
+        textLabel.setContentCompressionResistancePriority(.required - 2, for: .horizontal)
+        textLabel.setContentCompressionResistancePriority(.required - 2, for: .vertical)
         
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8)
+            make.edges.equalToSuperview().inset(boundsInset)
         }
     }
     
     // MARK: - Making Views
     
     open func makeTextLabel() -> UILabel {
-        let label = UILabel(frame: .zero)
+        let label = UILabel()
         label.numberOfLines = 0
-        label.font = .preferredFont(forTextStyle: .subheadline)
         label.adjustsFontForContentSizeCategory = true
         
         return label
     }
     
     open func makeStackView() -> UIStackView {
-        let stack = UIStackView(frame: .zero)
+        let stack = UIStackView()
         stack.axis = .horizontal
-        stack.spacing = 8
         
         return stack
     }

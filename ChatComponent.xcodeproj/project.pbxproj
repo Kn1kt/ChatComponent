@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893E42F226DBCB4400AEDDF3 /* IncomingTextMessageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E42F126DBCB4400AEDDF3 /* IncomingTextMessageCellViewModel.swift */; };
+		893E42F726DBD44900AEDDF3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E42F626DBD44900AEDDF3 /* String+Extensions.swift */; };
+		893E42F926DC108700AEDDF3 /* OutgoingMessageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E42F826DC108700AEDDF3 /* OutgoingMessageCellViewModel.swift */; };
 		F3C45D2F26D1357E00BE8D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D2E26D1357E00BE8D67 /* AppDelegate.swift */; };
 		F3C45D3126D1357E00BE8D67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D3026D1357E00BE8D67 /* SceneDelegate.swift */; };
 		F3C45D3326D1357E00BE8D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D3226D1357E00BE8D67 /* ViewController.swift */; };
@@ -23,8 +26,8 @@
 		F3C45D7626D13A4000BE8D67 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7526D13A4000BE8D67 /* MessagesViewController.swift */; };
 		F3C45D7926D13B7500BE8D67 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7826D13B7500BE8D67 /* UIView+Extensions.swift */; };
 		F3C45D7C26D13C1C00BE8D67 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3C45D7B26D13C1C00BE8D67 /* SnapKit */; };
-		F3C45D7E26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7D26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift */; };
-		F3C45D8226D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8126D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift */; };
+		F3C45D7E26D1402000BE8D67 /* IncomingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D7D26D1402000BE8D67 /* IncomingMessageCell.swift */; };
+		F3C45D8226D140D900BE8D67 /* OutgoingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8126D140D900BE8D67 /* OutgoingMessageCell.swift */; };
 		F3C45D8726D1470900BE8D67 /* IncomingTextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8626D1470900BE8D67 /* IncomingTextMessageView.swift */; };
 		F3C45D8926D1472C00BE8D67 /* OutgoingTextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8826D1472C00BE8D67 /* OutgoingTextMessageView.swift */; };
 		F3C45D8C26D1487B00BE8D67 /* BaseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C45D8B26D1487B00BE8D67 /* BaseMessageView.swift */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		893E42F126DBCB4400AEDDF3 /* IncomingTextMessageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageCellViewModel.swift; sourceTree = "<group>"; };
+		893E42F626DBD44900AEDDF3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		893E42F826DC108700AEDDF3 /* OutgoingMessageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCellViewModel.swift; sourceTree = "<group>"; };
 		F3C45D2B26D1357E00BE8D67 /* ChatComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C45D2E26D1357E00BE8D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C45D3026D1357E00BE8D67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +89,8 @@
 		F3C45D5226D1358400BE8D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3C45D7526D13A4000BE8D67 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		F3C45D7826D13B7500BE8D67 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		F3C45D7D26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageCollectionViewCell.swift; sourceTree = "<group>"; };
-		F3C45D8126D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3C45D7D26D1402000BE8D67 /* IncomingMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageCell.swift; sourceTree = "<group>"; };
+		F3C45D8126D140D900BE8D67 /* OutgoingMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCell.swift; sourceTree = "<group>"; };
 		F3C45D8626D1470900BE8D67 /* IncomingTextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageView.swift; sourceTree = "<group>"; };
 		F3C45D8826D1472C00BE8D67 /* OutgoingTextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageView.swift; sourceTree = "<group>"; };
 		F3C45D8B26D1487B00BE8D67 /* BaseMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessageView.swift; sourceTree = "<group>"; };
@@ -140,6 +146,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		893E42ED26DBCACE00AEDDF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D7D26D1402000BE8D67 /* IncomingMessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		893E42EE26DBCAD400AEDDF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3C45D8126D140D900BE8D67 /* OutgoingMessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		893E42EF26DBCAD900AEDDF3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				893E42F126DBCB4400AEDDF3 /* IncomingTextMessageCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		893E42F026DBCAE200AEDDF3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				893E42F826DC108700AEDDF3 /* OutgoingMessageCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		893E42F326DBD0FF00AEDDF3 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				893E42EF26DBCAD900AEDDF3 /* ViewModel */,
+				893E42ED26DBCACE00AEDDF3 /* View */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		893E42F426DBD10800AEDDF3 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				893E42F026DBCAE200AEDDF3 /* ViewModel */,
+				893E42EE26DBCAD400AEDDF3 /* View */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		F3C45D2226D1357E00BE8D67 = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				F3C45D6226D135EF00BE8D67 /* Chat */,
-				F3C45D6326D135F400BE8D67 /* ChatList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -240,13 +295,6 @@
 				F3C45D6F26D1394500BE8D67 /* Views */,
 			);
 			path = Chat;
-			sourceTree = "<group>";
-		};
-		F3C45D6326D135F400BE8D67 /* ChatList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ChatList;
 			sourceTree = "<group>";
 		};
 		F3C45D6F26D1394500BE8D67 /* Views */ = {
@@ -279,7 +327,6 @@
 		F3C45D7326D139CB00BE8D67 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45DB826D2DE4F00BE8D67 /* CollectionUpdate */,
 				F3C45D9F26D1A8F300BE8D67 /* Bindings */,
 				F3C45D9826D1A4C600BE8D67 /* Item */,
 				F3C45D9726D1A4C200BE8D67 /* Section */,
@@ -303,6 +350,7 @@
 				F3C45D7826D13B7500BE8D67 /* UIView+Extensions.swift */,
 				F3C45D9526D189A400BE8D67 /* Array+Extensions.swift */,
 				F3C45DA226D1ACAF00BE8D67 /* Rx+DiffableDataSources.swift */,
+				893E42F626DBD44900AEDDF3 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,7 +358,7 @@
 		F3C45D7F26D1405800BE8D67 /* IncomingMessage */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D7D26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift */,
+				893E42F326DBD0FF00AEDDF3 /* Text */,
 			);
 			path = IncomingMessage;
 			sourceTree = "<group>";
@@ -318,7 +366,7 @@
 		F3C45D8026D1407C00BE8D67 /* OutgoingMessage */ = {
 			isa = PBXGroup;
 			children = (
-				F3C45D8126D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift */,
+				893E42F426DBD10800AEDDF3 /* Text */,
 			);
 			path = OutgoingMessage;
 			sourceTree = "<group>";
@@ -465,13 +513,6 @@
 				F3C45DB626D2DCD400BE8D67 /* ChatProtocol.swift */,
 			);
 			path = Chat;
-			sourceTree = "<group>";
-		};
-		F3C45DB826D2DE4F00BE8D67 /* CollectionUpdate */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CollectionUpdate;
 			sourceTree = "<group>";
 		};
 		F3C45DB926D2DEC900BE8D67 /* Changeset */ = {
@@ -652,8 +693,9 @@
 			files = (
 				F3C45DA726D2D1AF00BE8D67 /* ReusableCell.swift in Sources */,
 				F3C45DBB26D2DEEA00BE8D67 /* CollectionChangeset.swift in Sources */,
+				893E42F926DC108700AEDDF3 /* OutgoingMessageCellViewModel.swift in Sources */,
 				F3C45D9426D1717F00BE8D67 /* Reusable.swift in Sources */,
-				F3C45D7E26D1402000BE8D67 /* IncomingMessageCollectionViewCell.swift in Sources */,
+				F3C45D7E26D1402000BE8D67 /* IncomingMessageCell.swift in Sources */,
 				F3C45DC026D2FEEC00BE8D67 /* MessageCellViewModelProtocol.swift in Sources */,
 				F3C45D8726D1470900BE8D67 /* IncomingTextMessageView.swift in Sources */,
 				F3C45D8926D1472C00BE8D67 /* OutgoingTextMessageView.swift in Sources */,
@@ -665,7 +707,7 @@
 				F3C45DC326D3047E00BE8D67 /* MessageState.swift in Sources */,
 				F3C45DB426D2D80100BE8D67 /* UserProtocol.swift in Sources */,
 				F3C45D2F26D1357E00BE8D67 /* AppDelegate.swift in Sources */,
-				F3C45D8226D140D900BE8D67 /* OutgoingMessageCollectionViewCell.swift in Sources */,
+				F3C45D8226D140D900BE8D67 /* OutgoingMessageCell.swift in Sources */,
 				F3C45D7926D13B7500BE8D67 /* UIView+Extensions.swift in Sources */,
 				F3C45D7626D13A4000BE8D67 /* MessagesViewController.swift in Sources */,
 				F3C45DAB26D2D2E100BE8D67 /* MessagesServiceProtocol.swift in Sources */,
@@ -678,6 +720,8 @@
 				F3C45D9A26D1A50500BE8D67 /* MessagesSectionProtocol.swift in Sources */,
 				F3C45D8C26D1487B00BE8D67 /* BaseMessageView.swift in Sources */,
 				F3C45D9126D14A9100BE8D67 /* BaseTextMessageView.swift in Sources */,
+				893E42F726DBD44900AEDDF3 /* String+Extensions.swift in Sources */,
+				893E42F226DBCB4400AEDDF3 /* IncomingTextMessageCellViewModel.swift in Sources */,
 				F3C45DB726D2DCD400BE8D67 /* ChatProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,8 +898,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WT55D455BY;
+				DEVELOPMENT_TEAM = HV78FUU367;
 				INFOPLIST_FILE = ChatComponent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -864,6 +909,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qq.ChatComponent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -875,7 +921,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WT55D455BY;
+				DEVELOPMENT_TEAM = HV78FUU367;
 				INFOPLIST_FILE = ChatComponent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

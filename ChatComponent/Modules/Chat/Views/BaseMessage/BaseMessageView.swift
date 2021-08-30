@@ -13,9 +13,8 @@ open class BaseMessageView: UIView {
 
     open func makeTimeLabel() -> UILabel {
         let label = UILabel(frame: .zero)
-        label.font = .preferredFont(forTextStyle: .caption1)
         label.adjustsFontForContentSizeCategory = true
-        
+        label.textAlignment = .right
         return label
     }
     

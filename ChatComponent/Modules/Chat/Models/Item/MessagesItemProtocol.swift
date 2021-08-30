@@ -5,7 +5,7 @@
 //  Created by Nikita Konashenko on 22.08.2021.
 //
 
-import Foundation
+import UIKit
 
 public protocol MessagesItemProtocol: Hashable, HeightProvider {
         
@@ -18,11 +18,13 @@ public protocol MessagesItemProtocol: Hashable, HeightProvider {
 public struct MessagesItem: MessagesItemProtocol {
         
     public let cellModel: MessageCellViewModelProtocol
-    
-    public var height: Int { cellModel.height }
-    
+        
     public init(cellModel: MessageCellViewModelProtocol) {
         self.cellModel = cellModel
+    }
+    
+    public func height(withConstrainedWidth width: CGFloat) -> CGFloat {
+        return cellModel.height(withConstrainedWidth: width)
     }
     
 }

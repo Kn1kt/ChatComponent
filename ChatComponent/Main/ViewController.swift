@@ -19,10 +19,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        let chatVC = MessagesViewController()
-//        let nc = UINavigationController(rootViewController: chatVC)
-//        nc.modalPresentationStyle = .fullScreen
-//        present(nc, animated: false)
+        let mockService = MockMessagesService()
+        let chatVC = MessagesViewController<MessagesViewModel>()
+        chatVC.viewModel = .init(chatID: 0, user: mockService.makeCurrentUser(), messagesService: mockService)
+        let nc = UINavigationController(rootViewController: chatVC)
+        nc.modalPresentationStyle = .fullScreen
+        present(nc, animated: false)
     }
     
 }

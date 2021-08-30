@@ -5,10 +5,10 @@
 //  Created by Nikita Konashenko on 23.08.2021.
 //
 
-import Foundation
+import UIKit
 
 public protocol HeightProvider {
     
-    var height: Int { get }
+    func height(withConstrainedWidth width: CGFloat) -> CGFloat
     
 }

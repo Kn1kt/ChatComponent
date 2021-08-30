@@ -8,14 +8,19 @@
 import UIKit
 
 open class IncomingTextMessageView: BaseTextMessageView {
-        
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupAppearance()
+    
+    public struct Constants {
+        let textFont: UIFont
+        let timeFont: UIFont
+        let boundsInset: CGFloat
     }
     
-    public required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private var constants: Constants?
+    
+    convenience init(constants: Constants) {
+        self.init(boundsInset: constants.boundsInset)
+        self.constants = constants
+        setupAppearance()
     }
         
     open override func setupSubviews() {
@@ -32,7 +37,10 @@ open class IncomingTextMessageView: BaseTextMessageView {
         
         textLabel.textColor = .label
         textLabel.textAlignment = .left
+        textLabel.font = constants?.textFont
+        
         timeLabel.textColor = .secondaryLabel
+        timeLabel.font = constants?.timeFont
         
         stackView.alignment = .lastBaseline
     }

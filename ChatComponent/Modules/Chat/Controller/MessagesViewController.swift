@@ -59,10 +59,19 @@ open class MessagesViewController<ViewModel>: UIViewController where ViewModel: 
     // MARK: - Bindings
     
     open func setupBindings() {
+        let bindings = MessagesViewModelBindings(
+            sendMessage: .empty(),
+            sendImage: .empty(),
+            fetchNewMessages: .empty(),
+            fetchOldMessages: .empty()
+        )
         
-        viewModel.sections
-            .bind(to: dataSource.rx.applySnapshot())
-            .disposed(by: disposeBag)
+        disposeBag.insert(
+            viewModel.sections
+                .bind(to: dataSource.rx.applySnapshot()),
+            
+            viewModel.setup(bindings: bindings)
+        )
     }
     
     // MARK: - Private
@@ -71,16 +80,9 @@ open class MessagesViewController<ViewModel>: UIViewController where ViewModel: 
         let dataSource = DataSource(
             collectionView: collectionView,
             cellProvider: { collectionView, indexPath, item in
-                let identifier: String
-                if indexPath.item % 2 == 0 {
-                    identifier = OutgoingMessageCollectionViewCell.reuseIdentifier
-                } else {
-                    identifier = IncomingMessageCollectionViewCell.reuseIdentifier
-                }
-                
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
-                                                              for: indexPath)
-                
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item.cellModel.cellIdentifier,
+                                                              for: indexPath) as! ReusableCell
+                cell.cellModel = item.cellModel
                 return cell
             }
         )
@@ -90,10 +92,10 @@ open class MessagesViewController<ViewModel>: UIViewController where ViewModel: 
     
     private func makeCollectionView() -> UICollectionView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayouts())
-        collectionView.register(IncomingMessageCollectionViewCell.self,
-                                forCellWithReuseIdentifier: IncomingMessageCollectionViewCell.reuseIdentifier)
-        collectionView.register(OutgoingMessageCollectionViewCell.self,
-                                forCellWithReuseIdentifier: OutgoingMessageCollectionViewCell.reuseIdentifier)
+        collectionView.register(IncomingMessageCell.self,
+                                forCellWithReuseIdentifier: IncomingMessageCell.reuseIdentifier)
+        collectionView.register(OutgoingMessageCell.self,
+                                forCellWithReuseIdentifier: OutgoingMessageCell.reuseIdentifier)
         return collectionView
     }
     
@@ -111,13 +113,14 @@ open class MessagesViewController<ViewModel>: UIViewController where ViewModel: 
     }
     
     private func makePlainSection(for sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let itemHeights = calculateItemHeights(for: sectionIndex)
-        let groupHeight = max(itemHeights.map { $0 + 8 }.reduce(0, +), 1)
+        let itemHeights = itemHeights(withConstrainedWidth: layoutEnvironment.container.effectiveContentSize.width, for: sectionIndex)
+        let groupHeight = itemHeights.map({ $0 + 8 }).reduce(0, +)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .absolute(groupHeight))
         
-        let customGroup = NSCollectionLayoutGroup.custom(layoutSize: groupSize) { environment in
+        let customGroup = NSCollectionLayoutGroup.custom(layoutSize: groupSize) { [weak self] environment in
+            self?.updateCollectionViewTopInset() 
             return itemHeights.enumerated().map { index, height in
                 let containerWidth = environment.container.effectiveContentSize.width
                 let yOffset = itemHeights[..<index]
@@ -133,17 +136,12 @@ open class MessagesViewController<ViewModel>: UIViewController where ViewModel: 
         
         let section = NSCollectionLayoutSection(group: customGroup)
         
-        section.visibleItemsInvalidationHandler = { [weak self] visibleItems, offset, environment in
-            self?.updateCollectionViewTopInset()
-        }
-        
         return section
     }
     
-    private func calculateItemHeights(for sectionIndex: Int) -> [CGFloat] {
-//        guard let section = dataSource.snapshot().sectionIdentifiers[safe: sectionIndex] else { return [] }
-        
-        return dataSource.snapshot().itemIdentifiers.map { _ in 35 }
+    private func itemHeights(withConstrainedWidth width: CGFloat, for sectionIndex: Int) -> [CGFloat] {
+        guard let section = dataSource.snapshot().sectionIdentifiers[safe: sectionIndex] else { return [] }
+        return section.itemHeights(withConstrainedWidth: width * 0.7)
     }
     
     private func updateCollectionViewTopInset() {

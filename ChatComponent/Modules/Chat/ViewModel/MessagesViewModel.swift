@@ -35,19 +35,22 @@ public final class MessagesViewModel: MessagesViewModelProtocol {
     public let fetchingOldMessages: BehaviorRelay<Bool> = .init(value: false)
     
     private let chatID: Int
-    
+    private let user: UserProtocol
     private let messagesService: MessagesServiceProtocol
     
     private let defaultScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
     private let userInitiatedSerialScheduler = SerialDispatchQueueScheduler(qos: .userInitiated)
     
-    public init(chatID: Int, messagesService: MessagesServiceProtocol) {
+    public init(chatID: Int, user: UserProtocol, messagesService: MessagesServiceProtocol) {
         self.chatID = chatID
+        self.user = user
         self.messagesService = messagesService
     }
     
     public func setup(bindings: MessagesViewModelBindings) -> Disposable {
-        return Disposables.create()
+        return Disposables.create([
+            setupSections()
+        ])
     }
     
     private func setupSections() -> Disposable {
@@ -61,15 +64,35 @@ public final class MessagesViewModel: MessagesViewModelProtocol {
     private func update(sections: [Section], with updateEvent: ([Message], CollectionChangeset?)) -> [Section] {
         let (newMessages, changeset) = updateEvent
         
-//        guard let changeset = changeset else {
-//            return newMessages.map { message in
-//                switch message {
-//                case let .text(message):
-//                    return 
-//                }
-//            }
-//        }
+        guard let changeset = changeset else {
+            return makeSections(from: newMessages)
+        }
         
-        return []
+        var oldMessages = sections.flatMap(\.items).map(\.cellModel)
+        
+        changeset.deleted.reversed().forEach { oldMessages.remove(at: $0) }
+        changeset.inserted.forEach {
+            let newModel = makeViewModel(for: newMessages[$0])
+            oldMessages.insert(newModel, at: $0)
+        }
+        changeset.updated.forEach { oldMessages[$0].accept(newMessage: newMessages[$0]) }
+        
+        return [Section(items: oldMessages.map(MessagesItem.init))]
+    }
+    
+    private func makeSections(from messages: [Message]) -> [Section] {
+        let items = messages.map(makeViewModel(for:))
+        return [Section(items: items.map(MessagesItem.init))]
+    }
+    
+    private func makeViewModel(for message: Message) -> MessageCellViewModelProtocol {
+        switch message {
+        case let .text(textMessage):
+            if textMessage.sender.id == user.id {
+                return OutgoingMessageCellViewModel(message: textMessage)
+            } else {
+                return IncomingTextMessageCellViewModel(message: textMessage)
+            }
+        }
     }
 }
